@@ -43,8 +43,11 @@ end
 
 
 def assign_names_to_committees(parenthash,names_hash)
-    parenthash.each do |add_names|
-      names_hash.push parenthash
+    parenthash[:steps].each do |step|
+      # names_hash.push parenthash
+    step[:name] = names_hash.sample #.sample inbuilt method to pick a random name to be assigned to key
+
+      puts step.inspect
       end  
 end 
 
